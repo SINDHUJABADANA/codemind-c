@@ -1,22 +1,32 @@
 #include<stdio.h>
-#include<limits.h>
 int main()
 {
-    int size,a,b,min=INT_MAX;
-    scanf("%d",&size);
-    int arr[size],i;
-    for(i=0;i<size;i++)
+    int n,min=100,c=0;
+    scanf("%d",&n);
+    int arr[n],i;
+    for(i=0;i<n;i++)
     {
         scanf("%d",&arr[i]);
     }
-    scanf("%d%d",&a,&b);
-    for(i=0;i<size;i++)
+    int A,B;
+    scanf("%d%d",&A,&B);
+    for(i=0;i<n;i++)
     {
-        if((arr[i]<a || arr[i]>b) && arr[i]<min)
-        min=arr[i];
+        if(arr[i]<A || arr[i]>B)
+        {
+            if(min>arr[i])
+            {
+                min=arr[i];
+                c++;
+            }
+        }
     }
-    if(min==INT_MAX)
-    printf("-1");
+    if(c!=0)
+    {
+        printf("%d",min);
+    }
     else
-    printf("%d",min);
+    {
+        printf("-1");
+    }
 }
