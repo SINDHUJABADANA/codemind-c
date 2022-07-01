@@ -4,26 +4,26 @@ int main()
 {
     int n,temp,count,count1,i,j,k,m,s,x,y,r,f;
     scanf("%d",&n);
-    for (i=n;i>=0;i--)
+    for(i=n;i>=0;i--)
     {
-        count=0;
-        for(j=1;j<=i;j++)
-        {
-            if(i%j==0)
+            count=0;
+            for(j=1;j<=i;j++)
             {
-                count++;
+                if(i%j==0)
+                {
+                    count++;
+                }
             }
-        }
-        if(count==2)
-        {
-            x=i;
-            s=1;
-            break;
-        }
-        else
-        {
-            continue;
-        }
+            if(count==2)
+            {
+                x=i;
+                s=1;
+                break;
+            }
+            else
+            {
+                continue;
+            }
     }
     k=n;
     while(k>0)
