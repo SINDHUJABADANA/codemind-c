@@ -51,10 +51,12 @@ int main()
     r=abs(n-y);
     if(f<r)
     {
-        printf("%d",f);
+        printf("%d
+",f);
     }
     else
     {
-        printf("%d",r);
+        printf("%d
+",r);
     }
 }
